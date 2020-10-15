@@ -1,29 +1,26 @@
 import os
-
+import yaml
+import json
 
 def read_yaml(file_path):
-    import yaml
     with open(file_path) as yaml_file:
         file_data = yaml.load(yaml_file, Loader=yaml.CLoader)
     return file_data
 
 
 def to_yaml(dict_file, file_path):
-    import yaml
     with open(file_path, 'w+') as f_out:
         f_out.write(yaml.dump(dict_file))
     return
 
 
 def read_json(file_path):
-    import json
     with open(file_path) as json_file:
         file_data = json.load(json_file)
     return file_data
 
 
 def to_json(dict_file, file_path):
-    import json
     with open(file_path, 'w+') as f_out:
         f_out.write(json.dumps(dict_file))
     return
