@@ -1,6 +1,7 @@
 import scipy.stats as stats
 import numpy as np
 from outlier_nalimov.outlier_test_nalimov import remove_outliers
+from chi_square.my_chisquare import *
 
 
 def pearson_corr(array1, array2):
